@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>افتتاح فرع المذنب العثيم مول – شركة الماجد للعود</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 25px;
+      direction: rtl;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      border: 4px solid #cfae70;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    }
+
+    .print-btn {
+      display: block;
+      background: #cfae70;
+      color: #000;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: 2px solid #000;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0 auto 15px;
+      transition: 0.3s;
+    }
+
+    .print-btn:hover {
+      background-color: #b8924f;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .header img {
+      max-height: 70px;
+      display: block;
+      margin: 0 auto 8px;
+    }
+
+    .company-name {
+      background: #000;
+      color: #cfae70;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .title {
+      text-align: center;
+      background: #cfae70;
+      color: #000;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 19px;
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    p {
+      font-size: 16.5px;
+      line-height: 2;
+      margin-bottom: 6px;
+      color: #222;
+    }
+
+    .label {
+      font-weight: bold;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #000;
+    }
+
+    /* QR */
+    .qr-wrapper {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .qr-wrapper img {
+      border: 4px solid #cfae70;
+      border-radius: 12px;
+      padding: 6px;
+      background: #fff;
+    }
+
+    .qr-caption {
+      margin-top: 8px;
+      font-size: 14.5px;
+      font-weight: 600;
+    }
+
+    /* سلايدر الصور */
+    .slider-section-title {
+      text-align: center;
+      margin: 30px auto 10px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .slider {
+      position: relative;
+      max-width: 900px;
+      height: 320px;
+      margin: 0 auto 5px;
+      background: #000;
+      border-radius: 16px;
+      border: 4px solid #cfae70;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.25);
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .prev,
+    .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #cfae70;
+      color: #000;
+      padding: 8px 14px;
+      border-radius: 50%;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: bold;
+      border: 2px solid #000;
+      user-select: none;
+    }
+
+    .prev { left: 15px; }
+    .next { right: 15px; }
+
+    .prev:hover,
+    .next:hover {
+      background: #b8924f;
+    }
+
+    .dots {
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 4px;
+      border-radius: 50%;
+      background: #cfae70;
+      cursor: pointer;
+      border: 1px solid #000;
+    }
+
+    .dot.active {
+      background: #000;
+    }
+
+    .footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    @media print {
+      .print-btn { display: none; }
+      body { background: #fff; padding: 0; }
+      .slider,
+      .dots { page-break-inside: avoid; }
+    }
+  </style>
+
+  <script>
+    function printPage() {
+      window.print();
+    }
+
+    let slideIndex = 1;
+
+    function showSlides(n) {
+      const slides = document.getElementsByClassName("slide");
+      const dots = document.getElementsByClassName("dot");
+      if (slides.length === 0) return;
+
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove("active");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      if (dots[slideIndex - 1]) {
+        dots[slideIndex - 1].classList.add("active");
+      }
+    }
+
+    function plusSlides(step) {
+      showSlides(slideIndex += step);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    window.onload = function () {
+      showSlides(slideIndex);
+    };
+  </script>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- زر الطباعة -->
+  <button class="print-btn" onclick="printPage()">🖨️ طباعة التعميم</button>
+
+  <!-- الهيدر واسم الشركة (اختياري إضافة شعار فى نفس المجلد باسم logo.png) -->
+  <div class="header">
+    <!-- <img src="logo.png" alt="شعار الماجد للعود"> -->
+    <div class="company-name">شركة الماجد للعود</div>
+  </div>
+
+  <!-- عنوان التعميم -->
+  <div class="title">افتتاح فرع (المذنب العثيم مول)</div>
+
+  <p><strong>السادة / المحترمين</strong></p>
+  <p>تحية طيبة وبعد ،،،</p>
+
+  <p>
+    يسرّنا أن نحيطكم علماً بأنه تم – بحمد الله – افتتاح فرع
+    <strong>(المذنب العثيم مول – المملكة العربية السعودية – كود 1451)</strong>
+    بتاريخ <strong>06/12/2025م</strong>.
+  </p>
+
+  <!-- بيانات أمين العهدة -->
+  <h3>أولاً: بيانات أمين العهدة</h3>
+  <p><span class="label">الاسم:</span> عزام صالح المغير</p>
+  <p><span class="label">الرقم الوظيفي:</span> 7148</p>
+  <p><span class="label">رقم الجوال:</span> 00966501119300</p>
+
+  <!-- بيانات مشرف الفرع -->
+  <h3>ثانياً: بيانات مشرف الفرع</h3>
+  <p><span class="label">الاسم:</span> أحمد عصام عبدالرحمن</p>
+  <p><span class="label">الرقم الوظيفي:</span> 11207</p>
+  <p><span class="label">رقم الجوال:</span> 00966537423899</p>
+
+  <!-- معلومات الفرع -->
+  <h3>ثالثاً: معلومات الفرع</h3>
+  <p><span class="label">عنوان الفرع:</span> العثيم مول – المذنب – المملكة العربية السعودية</p>
+
+  <p><span class="label">مواعيد العمل:</span></p>
+  <p>من السبت إلى الخميس: من الساعة 09:00 صباحًا حتى الساعة 12:00 منتصف الليل</p>
+  <p>يوم الجمعة: من الساعة 01:00 ظهرًا حتى الساعة 12:00 منتصف الليل</p>
+
+  <p>
+    <span class="label">📍 موقع الفرع على الخرائط:</span>
+    <a href="https://maps.app.goo.gl/HNRGbEhmpU3CAHbX8?g_st=iw" target="_blank">
+      اضغط هنا لفتح موقع الفرع في Google Maps
+    </a>
+  </p>
+
+  <!-- QR كود للموقع (اختياري) -->
+  <div class="qr-wrapper">
+    <!-- احفظ كود الـ QR باسم branch_qr.png داخل مجلد images أو عدّل المسار -->
+    <img src="images/branch_qr.png" alt="QR Code – موقع الفرع" width="220" height="220">
+    <div class="qr-caption">📌 امسح الكود لفتح موقع الفرع على الخرائط</div>
+  </div>
+
+  <div class="footer">وتفضلوا بقبول وافر الشكر والتقدير ،،،</div>
+
+</div>
+
+<!-- سلايدر صور الفرع -->
+<div class="slider-section-title">📷 صور الفرع</div>
+
+<div class="slider">
+  <!-- ضع الصور الفعلية فى مجلد images بنفس الأسماء التالية -->
+  <div class="slide"><img src="images/branch1.jpg" alt="صورة الفرع 1"></div>
+  <div class="slide"><img src="images/branch2.jpg" alt="صورة الفرع 2"></div>
+  <div class="slide"><img src="images/branch3.jpg" alt="صورة الفرع 3"></div>
+  <div class="slide"><img src="images/branch4.jpg" alt="صورة الفرع 4"></div>
+  <div class="slide"><img src="images/branch5.jpg" alt="صورة الفرع 5"></div>
+  <div class="slide"><img src="images/branch6.jpg" alt="صورة الفرع 6"></div>
+  <div class="slide"><img src="images/branch7.jpg" alt="صورة الفرع 7"></div>
+  <div class="slide"><img src="images/branch8.jpg" alt="صورة الفرع 8"></div>
+
+  <span class="prev" onclick="plusSlides(-1)">⟨</span>
+  <span class="next" onclick="plusSlides(1)">⟩</span>
+</div>
+
+<div class="dots">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
+</body>
+</html>
